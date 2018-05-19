@@ -20,7 +20,10 @@ pipeline {
     stage('Test') {
       agent any
       steps {
-        timestamps()
+        timestamps() {
+          echo 'any'
+        }
+
       }
     }
   }
