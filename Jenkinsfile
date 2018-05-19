@@ -11,6 +11,7 @@ pipeline {
           }
         }
         stage('message') {
+          agent any
           steps {
             echo 'ccc'
           }
