@@ -21,8 +21,10 @@ pipeline {
     stage('Test') {
       agent any
       steps {
-        timestamps() {
-          echo 'any'
+        script {
+          sh './gradlew check'
+
+          junit 'build/reports/**/*.xml'
         }
 
       }
